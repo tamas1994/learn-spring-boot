@@ -17,7 +17,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(Application.class)
-@WebAppConfiguration//由于加了Swagger2，必须加这条注解
+//@WebAppConfiguration//由于加了Swagger2，必须加这条注解
 public class UserServiceTest {
     @Autowired
     private UserService userService;
