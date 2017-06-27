@@ -79,6 +79,13 @@
         </dependency>
         <!--数据源配置结束-->
 
+        <!--Redis开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+        </dependency>
+        <!--Redis结束-->
+
 
     </dependencies>
 
