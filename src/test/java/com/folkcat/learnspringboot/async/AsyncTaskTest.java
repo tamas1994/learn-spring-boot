@@ -8,7 +8,8 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import static org.junit.Assert.*;
+import java.util.concurrent.Future;
+
 
 /**
  * Created by Tamas on 2017/6/28.
@@ -21,8 +22,18 @@ public class AsyncTaskTest {
     private AsyncTask task;
     @Test
     public void test() throws Exception {
-        task.doTaskOne();
-        task.doTaskTwo();
-        task.doTaskThree();
+        long start = System.currentTimeMillis();
+        Future<String> task1 = task.doTaskOne();
+        Future<String> task2 = task.doTaskTwo();
+        Future<String> task3 = task.doTaskThree();
+        while(true) {
+            if(task1.isDone() && task2.isDone() && task3.isDone()) {
+                // 三个任务都调用完成，退出循环等待
+                break;
+            }
+            Thread.sleep(1000);
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("任务全部完成，总耗时：" + (end - start) + "毫秒");
     }
 }
