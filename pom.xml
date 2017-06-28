@@ -114,6 +114,13 @@
         </dependency>
         <!--MyBatis结束-->
 
+        <!--rabbitmq开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+        <!--rabbitmq结束-->
+
 
     </dependencies>
 
