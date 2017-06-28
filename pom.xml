@@ -99,6 +99,13 @@
         </dependency>
         <!--Log4J结束-->
 
+        <!--JavaMailSender开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        <!--JavaMailSender结束-->
+
 
     </dependencies>
 
