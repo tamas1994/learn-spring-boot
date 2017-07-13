@@ -11,6 +11,8 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -28,5 +30,25 @@ public class UserMapperTest {
         userMapper.insert("AAA", 20);
         User u = userMapper.findByName("AAA");
         Assert.assertEquals(20, u.getAge().intValue());
+    }
+
+    @Test
+    public void update(){
+        User user=new User("shabi",23);
+        user.setId(5L);
+        int i=userMapper.update(user);
+        System.out.println("i:"+i);
+    }
+
+    @Test
+    public void delete(){
+        int i=userMapper.deleteByName("d");
+        System.out.println("i:"+i);
+    }
+
+    @Test
+    public void getAll(){
+        List<User> userList=userMapper.getAll();
+        System.out.println("user list size : "+userList.size());
     }
 }
