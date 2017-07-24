@@ -1,4 +1,4 @@
-package com.folkcat.learnspringboot.Redis;
+package com.folkcat.learnspringboot.redis;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.serializer.support.DeserializingConverter;

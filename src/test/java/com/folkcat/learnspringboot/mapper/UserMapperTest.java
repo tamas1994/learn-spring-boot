@@ -11,7 +11,9 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -34,9 +36,19 @@ public class UserMapperTest {
 
     @Test
     public void update(){
-        User user=new User("shabi",23);
+        User user=new User("shabi",21);
         user.setId(5L);
         int i=userMapper.update(user);
+        System.out.println("i:"+i);
+    }
+
+    @Test
+    public void updateByMap(){
+        Map<String ,String> map=new HashMap<>();
+        map.put("name","mapName");
+        map.put("age","16");
+        map.put("id","5");
+        int i=userMapper.updateByMap(map);
         System.out.println("i:"+i);
     }
 
@@ -50,5 +62,12 @@ public class UserMapperTest {
     public void getAll(){
         List<User> userList=userMapper.getAll();
         System.out.println("user list size : "+userList.size());
+    }
+
+    @Test
+    public void insertWithoutColumn(){
+        User user=new User("haha",2);
+        user.setId(110L);
+        userMapper.insertWithoutColumn(user);
     }
 }
