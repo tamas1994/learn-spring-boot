@@ -1,6 +1,6 @@
 package com.folkcat.learnspringboot;
 
-import com.folkcat.learnspringboot.rabbit.Sender;
+import com.folkcat.learnspringboot.rabbit.QueueSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +16,9 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 public class RabbitMqTest {
     @Autowired
-    private Sender sender;
+    private QueueSender queueSender;
     @Test
     public void hello() throws Exception {
-        sender.send();
+        queueSender.send("第8条了哦");
     }
 }

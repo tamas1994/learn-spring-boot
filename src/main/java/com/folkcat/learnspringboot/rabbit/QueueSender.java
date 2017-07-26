@@ -10,10 +10,10 @@ import java.util.Date;
  * Created by Tamas on 2017/6/28.
  */
 @Component
-public class Sender {
+public class QueueSender {
     @Autowired
     private AmqpTemplate rabbitTemplate;
-    public void send() {
-        this.rabbitTemplate.convertAndSend("hello", "你好Android");
+    public void send(String message) {
+        this.rabbitTemplate.convertAndSend("tamas-exchange","routing-key", message);
     }
 }
