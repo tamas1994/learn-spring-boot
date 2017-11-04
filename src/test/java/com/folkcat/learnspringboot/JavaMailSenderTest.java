@@ -21,10 +21,10 @@ public class JavaMailSenderTest {
     @Test
     public void sendSimpleMail() throws Exception {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("tamas***@163.com");
-        message.setTo("67337****@qq.com");
-        message.setSubject("主题：简单邮件");
-        message.setText("测试邮件内容");
+        message.setFrom("sportstoryverification@sportstory.cn");
+        message.setTo("donghaifeng@hotmail.com");
+        message.setSubject("您好世界");
+        message.setText("世界你好");
         mailSender.send(message);
     }
 }

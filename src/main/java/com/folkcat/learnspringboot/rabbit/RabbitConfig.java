@@ -8,8 +8,9 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by Tamas on 2017/6/28.
  */
-@Configuration
+//@Configuration
 public class RabbitConfig {
+    /*
     @Bean
     public Queue queue() {
         return new Queue("tamas-queue");
@@ -25,4 +26,5 @@ public class RabbitConfig {
         return BindingBuilder.bind(queue()).to(exchange()).with("routing-key");
     }
 
+    */
 }
