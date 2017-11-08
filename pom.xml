@@ -149,6 +149,20 @@
             <version>2.8.1</version>
         </dependency>
 
+        <!--POI开始-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.15</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>3.15</version>
+        </dependency>
+        <!--POI结束-->
+
+
     </dependencies>
 
     <build>
