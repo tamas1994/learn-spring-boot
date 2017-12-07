@@ -103,6 +103,15 @@
         </dependency>
         <!--Redis结束-->
 
+        <!--Memcached 开始-->
+        <dependency>
+            <groupId>com.btmatthews.springboot</groupId>
+            <artifactId>memcached-spring-boot-starter</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+        <!--Memcached 结束-->
+
         <!--Log4J开始-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
