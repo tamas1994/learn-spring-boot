@@ -5,15 +5,15 @@ import javax.persistence.*;
 /**
  * Created by Tamas on 2017/6/27.
  */
-@Entity
-@Table(name="user2")
+//@Entity
+//@Table(name="user2")
 public class User2 {
-    @Id
-    @GeneratedValue
+    //@Id
+    //@GeneratedValue
     private Long id;
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private String name;
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private Integer age;
 
     public User2(){

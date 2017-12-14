@@ -1,13 +1,12 @@
 package com.folkcat.learnspringboot.mongo;
 
-import javax.persistence.Id;
 
 /**
  * Created by Tamas on 2017/7/31.
  */
 public class DemoInfo {
     //id属性是给mongodb用的，用@Id注解修饰
-    @Id
+    //@Id
     private String id;
 
     private String name;

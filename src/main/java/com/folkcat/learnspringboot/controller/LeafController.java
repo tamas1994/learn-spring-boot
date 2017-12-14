@@ -14,6 +14,6 @@ public class LeafController {
     @RequestMapping("index")
     public String indexHtml(Map<String, Object> map){
         map.put("hello", "this is a thymeleaf test");
-        return "/firstleaf";
+        return "/first                                             leaf";
     }
 }

@@ -10,9 +10,9 @@ import java.util.List;
  * Created by Tamas on 2017/10/16.
  */
 
-@Mapper
+//@Mapper
 public interface AllocationMapper {
 
-    @Select("select * from MOV_CKCOUNTERALLOCATION where flightId=#{flightId}")
+    //@Select("select * from MOV_CKCOUNTERALLOCATION where flightId=#{flightId}")
     List<Allocation> getAllocationList(@Param("flightId")String flightId);
 }
