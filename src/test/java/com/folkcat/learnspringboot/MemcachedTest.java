@@ -2,6 +2,7 @@ package com.folkcat.learnspringboot;
 
 import com.folkcat.learnspringboot.bean.User;
 import com.google.gson.Gson;
+import net.spy.memcached.MemcachedClient;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -9,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * Created by Tamas on 2017/12/7.
  */
 public class MemcachedTest extends BaseTest{
-    /*
+
 
     @Autowired
     MemcachedClient mMemcacheClient;
@@ -29,6 +30,6 @@ public class MemcachedTest extends BaseTest{
 
 
     }
-    */
+
 
 }
